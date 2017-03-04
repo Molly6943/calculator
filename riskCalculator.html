@@ -1,0 +1,263 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <title>风险管理计算器</title>
+    <link rel="stylesheet" href="./base.css" />
+    <link rel="stylesheet" href="./riskCalculator.css" />
+</head>
+<body>
+    <div id="header" class="ui-header">
+        <p class="ui-header__title">
+            风险管理计算器
+        </p>
+        <p class="ui-header__subTitle">
+            计算为抵御个人意外和疾病等人身风险所需保障额度
+        </p>
+    </div>
+    <div class="ui-body">
+        <div class="ui-body__red">
+            ●假若个人由于健康或意外导致收入中断，保证家庭主要开支所需保障额度:
+        </div>
+        <div class="ui-body__title">
+            一、应对家庭未来支出的资金准备
+        </div>
+        <div class="ui-body__line">
+            <p class="ui-body__leftText">
+                目前家庭每月总共支出（每月/元）（不计按揭还款）：
+            </p>
+            <div class="ui-body__input">
+                <input  id="total_spending" type="tel" value=""/>
+            </div>
+        </div>
+        <div class="ui-body__line">
+            <p class="ui-body__leftText">
+                其中供家人的生活支出（每月/元）（一般占正常家庭支出的60-80%）：
+            </p>
+            <div class="ui-body__input">
+                <input id="living_expenses"  type="tel" value=""/>
+            </div>
+        </div>
+        <div class="ui-body__line">
+            <p class="ui-body__leftText">
+                按现有生活水平，希望能保障家人生活年期/年（见备注）：
+            </p>
+            <div class="ui-body__input">
+                <input id="safeguard_years" type="tel" value=""/>
+            </div>
+        </div>
+        <div class="ui-body__line">
+            <p class="ui-body__leftText">
+                假设年均通胀率为：
+            </p>
+            <div class="ui-body__input">
+                <select id="annual_interest">
+                    <option value="请选择">请选择
+                    </option>
+                    <option value=3>3%
+                    </option>
+                    <option value=4>4%
+                    </option>
+                    <option value=5>5%
+                    </option>
+                </select>
+                <div class="ui-body__inputIcon">
+                </div>
+            </div>
+        </div>
+        <p class="ui-body__title">
+            二、按揭﹠借贷
+        </p>
+        <div class="ui-body__line">
+            <p class="ui-body__leftText">
+                需偿还的房产按揭（元）：
+            </p>
+            <div class="ui-body__input">
+                <input id="housing_mortgage" type="tel" value=""/>
+            </div>
+        </div>
+        <div class="ui-body__line">
+            <p class="ui-body__leftText">
+                其它需还贷款或借款（元）：
+            </p>
+            <div class="ui-body__input">
+                <input id="borrowing" type="tel" value=""/>
+            </div>
+        </div>
+        <div class="ui-body__line">
+            <p class="ui-body__leftText">
+                <span>三、预估需准备的子女教育金（元）：</span>
+            </p>
+            <div class="ui-body__input">
+                <input id="education_foundation" type="tel" value=""/>
+            </div>
+        </div>
+        <p class="ui-body__red">
+            ● 个人已拥有保障或愿套现的资产:
+        </p>
+        <p class="ui-body__title">
+            一、个人已拥有
+        </p>
+        <div class="ui-body__line">
+            <p class="ui-body__leftText">
+                个人购买的人寿保险总保额（元）：
+            </p>
+            <div class="ui-body__input">
+                <input id="personal_life_insurance"  type="tel" value=""/>
+            </div>
+        </div>
+        <div class="ui-body__line">
+            <p class="ui-body__leftText">
+                团体购买的人寿保险总保额（元）：
+            </p>
+            <div class="ui-body__input">
+                <input id="group_life_insurance"  type="tel" value=""/>
+            </div>
+        </div>
+        <p class="ui-body__title">
+            二、若发生风险，愿意套现的资产（用于医护费及生活费等支出/元）
+        </p>
+        <div class="ui-body__line">
+            <p class="ui-body__leftText">
+                物业投资（元）：
+            </p>
+            <div class="ui-body__input">
+                <input id="property_investment" type="tel" value=""/>
+            </div>
+        </div>
+        <div class="ui-body__line">
+            <p class="ui-body__leftText">
+                股票∕基金（元）：
+            </p>
+            <div class="ui-body__input">
+                <input id="fund" type="tel" value=""/>
+            </div>
+        </div>
+        <div class="ui-body__line">
+            <p class="ui-body__leftText">
+                储蓄（活期∕定期）（元）：
+            </p>
+            <div class="ui-body__input">
+                <input id="savings" type="tel" value=""/>
+            </div>
+        </div>
+        <div class="ui-body__line">
+            <p class="ui-body__leftText">
+                其它资产（元）：
+            </p>
+            <div class="ui-body__input">
+                <input id="other_assets" type="tel" value=""/>
+            </div>
+        </div>
+        <p class="ui-body__red">
+            ●个人重大疾病风险所需保障:
+        </p>
+        <div class="ui-body__line">
+            <p class="ui-body__leftText">
+                预估医疗费自费支出（元）：
+            </p>
+            <div class="ui-body__input">
+                <input id="medical_treatment_cost" type="tel" value=""/>
+            </div>
+        </div>
+        <div class="ui-body__line">
+            <p class="ui-body__leftText">
+                预估养护及营养费（元）：
+            </p>
+            <div class="ui-body__input">
+                <input id="maintenance" type="tel" value=""/>
+            </div>
+        </div>
+        <div class="ui-body__line">
+            <p class="ui-body__leftText">
+                预估误工损失(年收入×预估休养年期)（元）：
+            </p>
+            <div class="ui-body__input">
+                <input id="delays_loss" type="tel" value=""/>
+            </div>
+        </div>
+        <div class="is-line">
+        </div>
+    </div>
+    <div class="ui-btn">
+        <div class="ui-btn__calculator">
+            <div class="ui-btn__icon1">
+            </div>
+            <p>
+                计算
+            </p>
+        </div>
+        <div class="ui-btn__reset">
+            <div class="ui-btn__icon2">
+            </div>
+            <p>
+                重置
+            </p>
+        </div>
+    </div>
+    <div class="ui-result">
+        <div class="ui-result__bg">
+            <div id="notResult" class="ui-result__show">
+                <div class="ui-result__img">
+                </div>
+                <p class="ui-result__text">
+                    结果呈现
+                </p>
+            </div>
+            <p id="isResult" class="isResult">
+            </p>
+        </div>
+    </div>
+    <div class="ui-notice">
+        <p class="ui-notice__title">
+            备注：
+        </p>
+        <p class="ui-notice__text">
+            1. 您的家庭保障额度，即为个人若发生人身风险，因收入中断或支出增加，您或整个家庭的资金需要减去个人已拥有保障和应对风险愿意套现的资产。
+        </p>
+        <p class="ui-notice__text">
+            2.保障家人的生活年期可根据配偶和家人的收入和支出情况，为维持现有生活水平来预估。可用从现在起到配偶退休后或子女上大学的年期为参考。
+        </p>
+        <p class="ui-notice__text">
+            3.发生重疾的资金需要，除医疗费外，也同时考虑了养护营养费和误工损失，算出数额较符合实际。
+        </p>
+        <div class="is-line">
+        </div>
+    </div>
+    <div class="ui-more">
+        <div class="ui-more__title">
+            更多计算：
+        </div>
+        <div class="ui-more__box">
+            <p onclick="javascript:window.location.href='riskCalculator.html'">
+                风险管理
+            </p>
+            <p onclick="javascript:window.location.href='childCalculator.html'">
+                子女教育
+            </p>
+            <p>
+                社保养老
+            </p>
+            <p onclick="javascript:window.location.href='moneyCalculator.html'">
+                财富增长
+            </p>
+        </div>
+        <div class="ui-bottom">
+            <div class="ui-more__leftImg">
+            </div>
+            <div class="ui-more__text">
+                <div class="ui-more__Title">
+                    合域理财&nbsp;安心未来
+                </div>
+                <div class="ui-footer__subTitle">
+                    公众号：合域理财窗口
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+<script src="./riskCalculator.js"></script>
+</html>

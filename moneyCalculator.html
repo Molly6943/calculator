@@ -1,0 +1,225 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <title>财富增长计算器</title>
+    <link rel="stylesheet" href="./base.css" />
+    <link rel="stylesheet" href="./moneyCalculator.css" />
+</head>
+
+<body>
+    <div id="header" class="ui-header">
+        <p class="ui-header__title">
+            财富增长计算器
+        </p>
+        <p class="ui-header__subTitle">
+            计算投资资产未来的价值
+        </p>
+    </div>
+    <div class="ui-content">
+        <div class="ui-content__title">
+            <div class="ui-content__leftTitle">
+                资产价值
+            </div>
+            <div class="ui-content__rightTitle">
+                预计年平均收益率
+            </div>
+        </div>
+        <div class="ui-content__line">
+            <div class="ui-content__left">
+                <div class="ui-content__leftSubTitle">
+                    物业投资
+                </div>
+                <div class="ui-content__leftMoney">
+                    ￥
+                </div>
+                <div class="ui-content__leftInput">
+                    <input id="T1" type="tel" value="" />
+                </div>
+            </div>
+            <div class="ui-content__right">
+                <p>
+                    &nbsp;
+                </p>
+                <div class="ui-content__rightInput">
+                    <input id="C1" type="tel" value="" />
+                </div>
+                <div class="ui-content__rightMoney">
+                    %
+                </div>
+            </div>
+        </div>
+        <div class="ui-content__line">
+            <div class="ui-content__left">
+                <div class="ui-content__leftSubTitle">
+                    股票/基金
+                </div>
+                <div class="ui-content__leftMoney">
+                    ￥
+                </div>
+                <div class="ui-content__leftInput">
+                    <input id="T2" type="tel" value="" />
+                </div>
+            </div>
+            <div class="ui-content__right">
+                <p>
+                    &nbsp;
+                </p>
+                <div class="ui-content__rightInput">
+                    <input id="C2" type="tel" value="" />
+                </div>
+                <div class="ui-content__rightMoney">
+                    %
+                </div>
+            </div>
+        </div>
+        <div class="ui-content__line">
+            <div class="ui-content__left">
+                <div class="ui-content__leftSubTitle">
+                    储蓄
+                </div>
+                <div class="ui-content__leftMoney">
+                    ￥
+                </div>
+                <div class="ui-content__leftInput">
+                    <input id="T3" type="tel" value="" />
+                </div>
+            </div>
+            <div class="ui-content__right">
+                <p>
+                    &nbsp;
+                </p>
+                <div class="ui-content__rightInput">
+                    <input id="C3" type="tel" value="" />
+                </div>
+                <div class="ui-content__rightMoney">
+                    %
+                </div>
+            </div>
+        </div>
+        <div class="ui-content__line">
+            <div class="ui-content__left">
+                <div class="ui-content__leftSubTitle">
+                    其他投资（1）
+                </div>
+                <div class="ui-content__leftMoney">
+                    ￥
+                </div>
+                <div class="ui-content__leftInput">
+                    <input id="T4" type="tel" value="" />
+                </div>
+            </div>
+            <div class="ui-content__right">
+                <p>
+                    &nbsp;
+                </p>
+                <div class="ui-content__rightInput">
+                    <input id="C4" type="tel" value="" />
+                </div>
+                <div class="ui-content__rightMoney">
+                    %
+                </div>
+            </div>
+        </div>
+        <div class="ui-content__line">
+            <div class="ui-content__left">
+                <div class="ui-content__leftSubTitle">
+                    其他投资（2）
+                </div>
+                <div class="ui-content__leftMoney">
+                    ￥
+                </div>
+                <div class="ui-content__leftInput">
+                    <input id="T5" type="tel" value="" />
+                </div>
+            </div>
+            <div class="ui-content__right">
+                <p>
+                    &nbsp;
+                </p>
+                <div class="ui-content__rightInput">
+                    <input id="C5" type="tel" value="" />
+                </div>
+                <div class="ui-content__rightMoney">
+                    %
+                </div>
+            </div>
+        </div>
+        <div class="ui-content__total">
+            <p class="ui-content__leftTotalText">
+                求
+            </p>
+            <div class="ui-content__totalInput">
+                <input id="years" type="tel" value="" />
+            </div>
+            <p class="ui-content__rightTotalText">
+                年后资产总值
+            </p>
+        </div>
+    </div>
+    <div class="ui-btn">
+        <div class="ui-btn__calculator">
+            <div class="ui-btn__icon1">
+            </div>
+            <p>
+                计算
+            </p>
+        </div>
+        <div class="ui-btn__reset">
+            <div class="ui-btn__icon2">
+            </div>
+            <p>
+                重置
+            </p>
+        </div>
+    </div>
+    <div class="ui-result">
+        <div class="ui-result__bg">
+            <div id="notResult" class="ui-result__show">
+                <div class="ui-result__img">
+                </div>
+                <p class="ui-result__text">
+                    结果呈现
+                </p>
+            </div>
+            <p id="isResult" class="isResult">
+            </p>
+        </div>
+    </div>
+    <div class="ui-more">
+        <div class="ui-more__title">
+            更多计算：
+        </div>
+        <div class="ui-more__box">
+            <p onclick="javascript:window.location.href='riskCalculator.html'">
+                风险管理
+            </p>
+            <p onclick="javascript:window.location.href='childCalculator.html'">
+                子女教育
+            </p>
+            <p>
+                社保养老
+            </p>
+            <p onclick="javascript:window.location.href='retireCalculator.html'">
+                退休规划
+            </p>
+        </div>
+        <div class="ui-bottom">
+            <div class="ui-more__leftImg">
+            </div>
+            <div class="ui-more__text">
+                <div class="ui-more__Title">
+                    合域理财&nbsp;安心未来
+                </div>
+                <div class="ui-footer__subTitle">
+                    公众号：合域理财窗口
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+<script src="./moneyCalculator.js"></script>
+</html>

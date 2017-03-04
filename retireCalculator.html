@@ -1,0 +1,245 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <title>退休规划计算器</title>
+    <link rel="stylesheet" href="./base.css" />
+</head>
+<body>
+    <div id="header" class="ui-header">
+        <p class="ui-header__title">
+            退休规划计算器
+        </p>
+        <p class="ui-header__subTitle">
+            计算理想退休生活所需要的养老金和现在所需准备
+        </p>
+    </div>
+    <div class="ui-body">
+        <div class="ui-body__line">
+            <p class="ui-body__leftText">
+                您现在的年龄(岁)：
+            </p>
+            <div class="ui-body__input">
+                <input id="now_age" type="tel" value=""/>
+            </div>
+        </div>
+        <div class="ui-body__line">
+            <p class="ui-body__leftText">
+                计划退休年龄：
+            </p>
+            <div class="ui-body__input">
+                <select id="retirement_age">
+                    <option value="请选择年龄">请选择
+                    </option>
+                    <option value=45>45岁
+                    </option>
+                    <option value=50>50岁
+                    </option>
+                    <option value=55>55岁
+                    </option>
+                    <option value=60>60岁
+                    </option>
+                    <option value=65>65岁
+                    </option>
+                </select>
+                <div class="ui-body__inputIcon">
+                </div>
+            </div>
+        </div>
+        <div class="ui-body__line">
+            <p class="ui-body__leftText">
+                预计养老年期：
+            </p>
+            <div class="ui-body__input">
+                <select id="expected_retirement_age">
+                    <option value="请选择年期">请选择
+                    </option>
+                    <option value=20>20年
+                    </option>
+                    <option value=25>25年
+                    </option>
+                    <option value=30>30年
+                    </option>
+                    <option value=35>35年
+                    </option>
+                    <option value=40>40年
+                    </option>
+                </select>
+                <div class="ui-body__inputIcon">
+                </div>
+            </div>
+        </div>
+        <div class="ui-body__line">
+            <p class="ui-body__leftText">
+                假设平均通胀率：
+            </p>
+            <div class="ui-body__input">
+                <select id="average_inflation">
+                    <option value="请选择">请选择
+                    </option>
+                    <option value=3>3%
+                    </option>
+                    <option value=4>4%
+                    </option>
+                    <option value=5>5%
+                    </option>
+                </select>
+                <div class="ui-body__inputIcon">
+                </div>
+            </div>
+        </div>
+        <div class="ui-body__line">
+            <p class="ui-body__leftText">
+                假如今天退休，满足您理想退休生活需要（每月/元）：
+            </p>
+            <div class="ui-body__input">
+                <input id="month_avg_wage" type="tel" value=""/>
+            </div>
+        </div>
+        <div class="ui-body__line">
+            <p class="ui-body__leftText">
+                从现在起，每年为退休生活做定额投资，假设投资平均年复利：
+            </p>
+            <div class="ui-body__input">
+                <select id="annual_interest" >
+                    <option value="请选择">请选择
+                    </option>
+                    <option value=6>6%
+                    </option>
+                    <option value=7>7%
+                    </option>
+                    <option value=8>8%
+                    </option>
+                    <option value=9>9%
+                    </option>
+                </select>
+                <div class="ui-body__inputIcon">
+                </div>
+            </div>
+        </div>
+        <div class="ui-body__line">
+            <p class="ui-body__leftText">
+                或选择一次性投资，假设平均年复利：
+            </p>
+            <div class="ui-body__input">
+                <select id="next_annual_interest">
+                    <option value="请选择">请选择
+                    </option>
+                    <option value=6>6%
+                    </option>
+                    <option value=7>7%
+                    </option>
+                    <option value=8>8%
+                    </option>
+                    <option value=9>9%
+                    </option>
+                </select>
+                <div class="ui-body__inputIcon">
+                </div>
+            </div>
+        </div>
+        <div class="ui-body__line">
+            <p class="ui-body__leftText">
+                退休时退休金额放在一个稳健的投资工具中，边增值边领取。假设投资年复利：
+            </p>
+            <div class="ui-body__input">
+                <select id="pension_annual_interest">
+                    <option value="请选择">请选择
+                    </option>
+                    <option value=3>3%
+                    </option>
+                    <option value=4>4%
+                    </option>
+                    <option value=5>5%
+                    </option>
+                    <option value=6>6%
+                    </option>
+                    <option value=7>7%
+                    </option>
+                </select>
+                <div class="ui-body__inputIcon">
+                </div>
+            </div>
+        </div>
+        <div class="is-line">
+        </div>
+    </div>
+    <div class="ui-btn">
+        <div class="ui-btn__calculator">
+            <div class="ui-btn__icon1">
+            </div>
+            <p>
+                计算
+            </p>
+        </div>
+        <div class="ui-btn__reset">
+            <div class="ui-btn__icon2">
+            </div>
+            <p>
+                重置
+            </p>
+        </div>
+    </div>
+    <div class="ui-result">
+        <div class="ui-result__bg">
+            <div id="notResult" class="ui-result__show">
+                <div class="ui-result__img">
+                </div>
+                <p class="ui-result__text">
+                    结果呈现
+                </p>
+            </div>
+            <p id="isResult" class="isResult">
+            </p>
+        </div>
+    </div>
+    <div class="ui-notice">
+        <p class="ui-notice__title">
+            备注：
+        </p>
+        <p class="ui-notice__text">
+            1. 计算结果也同时考虑了退休后每月所需退休金会因通胀而增长，通胀率为您上面做的假设。
+        </p>
+        <p class="ui-notice__text">
+            2.计算结果未考虑社保和您可能已准备的养老金。你可对此做一个估算，或借用下面的社保养老计算器做计算，然后据此设定满足您理想退休生活每月所需金额。
+        </p>
+        <div class="is-line">
+        </div>
+    </div>
+    <div class="ui-more">
+        <div class="ui-more__title">
+            更多计算：
+        </div>
+        <div class="ui-more__box">
+            <p onclick="javascript:window.location.href='riskCalculator.html'">
+                风险管理
+            </p>
+            <p onclick="javascript:window.location.href='childCalculator.html'">
+                子女教育
+            </p>
+            <p>
+                社保养老
+            </p>
+            <p onclick="javascript:window.location.href='moneyCalculator.html'">
+                财富增长
+            </p>
+        </div>
+        <div class="ui-bottom">
+            <div class="ui-more__leftImg">
+            </div>
+            <div class="ui-more__text">
+                <div class="ui-more__Title">
+                    合域理财&nbsp;安心未来
+                </div>
+                <div class="ui-footer__subTitle">
+                    公众号：合域理财窗口
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+<script src="./retireCalculator.js"></script>
+</html>

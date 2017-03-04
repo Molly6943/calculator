@@ -1,0 +1,104 @@
+.ui-content{
+    display: block;
+    padding: 16px;
+    background-color: #fffadc;
+}
+.ui-content__title{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-flow: row;
+}
+.ui-content__leftTitle,.ui-content__rightTitle{
+    flex: 1;
+    font-size: 16px;
+    font-weight: bold;
+}
+.ui-content__line{
+    display: flex;
+    position: relative;
+    flex-wrap: nowrap;
+    flex-flow: row;
+    height: 80px;
+}
+.ui-content__leftSubTitle{
+    margin-bottom: 10px;
+}
+.ui-content__right>p{
+    margin-bottom: 10px;
+}
+.ui-content__left,.ui-content__right{
+    margin-top: 20px;
+    flex: 1;
+}
+.ui-content__leftInput,.ui-content__rightInput{
+    display: block;
+    width: 90%;
+    height: 40px;
+    line-height: 40px;
+    background-image: linear-gradient(to bottom,#fbf0a1,#ffe25a);
+    border-radius: 16px;
+    text-align: center;
+    border: 1px solid #e3c56b;
+}
+.ui-content__rightInput>input{
+    width: 100%;
+    height: 40px;
+    font-weight: bold;
+    font-size: 15px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    text-align: center;
+}
+.ui-content__leftInput>input{
+    width: 100%;
+    height: 40px;
+    font-weight: bold;
+    font-size: 15px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    text-align: center;
+}
+.ui-content__leftMoney{
+    position: absolute;
+    left: -16px;
+    top:60px;
+}
+.ui-content__rightMoney{
+    position: absolute;
+    right: -6px;
+    top: 60px;
+}
+.ui-content__total{
+    display: block;
+    margin-top: 20px;
+}
+.ui-content__totalInput{
+    display: inline-block;
+    width: 50%;
+    height: 40px;
+    line-height: 40px;
+    background-image: linear-gradient(to bottom,#fbf0a1,#ffe25a);
+    border-radius: 16px;
+    text-align: left;
+    border: 1px solid #e3c56b;
+}
+.ui-content__totalInput>input{
+    width: 100%;
+    height: 40px;
+    font-weight: bold;
+    font-size: 15px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    text-align: center;
+}
+.ui-content__leftTotalText{
+    display: inline-block;
+    text-align: left;
+}
+.ui-content__rightTotalText{
+    display: inline-block;
+    text-align: left;
+}

@@ -1,0 +1,160 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <title>子女计算器</title>
+    <link rel="stylesheet" href="./base.css" />
+</head>
+
+<body>
+    <div id="header" class="ui-header">
+        <p class="ui-header__title">
+            子女教育计算器
+        </p>
+        <p class="ui-header__subTitle">
+            计算子女大学教育所需教育金和现在所需准备
+        </p>
+    </div>
+    <div id="ui-body" class="ui-body">
+        <div class="ui-body__line">
+            <p class="ui-body__leftText">
+                子女年龄(岁)：
+            </p>
+            <div class="ui-body__input">
+                <input id="child-age" type="text" />
+            </div>
+        </div>
+        <div class="ui-body__line">
+            <p class="ui-body__leftText">
+                距离大学入学年期：
+            </p>
+            <div class="ui-body__input">
+                <input id="years" type="text" />
+            </div>
+        </div>
+        <div class="ui-body__choose">
+            <p class="ui-body__chooseText">
+                现在大学4年平均费用（学费+生活费）:
+            </p>
+            <div class="ui-body__chooseInput">
+                <select id="average_cost">
+                    <option value="请选择">请选择大学类型
+                    </option>
+                    <option value=80000>国内大学&nbsp;平均费用8万元
+                    </option>
+                    <option value=1000000>国外大学&nbsp;平均费用100万元
+                    </option>
+                </select>
+                <div class="ui-body__addNote">
+                    注：预计大学费用每年上涨5%
+                </div>
+                <div class="ui-body__chooseIcon">
+                </div>
+            </div>
+        </div>
+        <div class="ui-body__line">
+            <p class="ui-body__leftText">
+                从现在起开始进行子女教育金准备预期年均回报率：
+            </p>
+            <div class="ui-body__input">
+                <select id="expected_annual_return">
+                    <option value="请选择">请选择
+                    </option>
+                    <option value=6>6%
+                    </option>
+                    <option value=7>7%
+                    </option>
+                    <option value=8>8%
+                    </option>
+                    <option value=9>9%
+                    </option>
+                </select>
+                <div class="ui-body__inputIcon">
+                </div>
+            </div>
+        </div>
+        <div class="is-line">
+        </div>
+    </div>
+    <div class="ui-btn">
+        <div class="ui-btn__calculator">
+            <div class="ui-btn__icon1">
+            </div>
+            <p>
+                计算
+            </p>
+        </div>
+        <div class="ui-btn__reset">
+            <div class="ui-btn__icon2">
+            </div>
+            <p>
+                重置
+            </p>
+        </div>
+    </div>
+    <div class="ui-result">
+        <div class="ui-result__bg">
+            <div id="notResult" class="ui-result__show">
+                <div class="ui-result__img">
+                </div>
+                <p class="ui-result__text">
+                    结果呈现
+                </p>
+            </div>
+            <p id="isResult" class="isResult">
+            </p>
+        </div>
+    </div>
+    <div class="ui-notice">
+        <p class="ui-notice__title">
+            备注：
+        </p>
+        <p class="ui-notice__text">
+            1. 大学费用包含学费和生活费。
+        </p>
+        <p class="ui-notice__text">
+            2. 国外大学平均费用以美国为参考。
+        </p>
+        <p class="ui-notice__text">
+            3.学费增长率5%为参考过往数据做的假设。
+        </p>
+        <div class="is-line">
+        </div>
+    </div>
+    <div class="ui-more">
+        <div class="ui-more__title">
+            更多计算：
+        </div>
+        <div class="ui-more__box">
+            <p onclick="javascript:window.location.href='riskCalculator.html'">
+                风险管理
+            </p>
+            <p onclick="javascript:window.location.href='retireCalculator.html'">
+                退休规划
+            </p>
+            <p>
+                社保养老
+            </p>
+            <p onclick="javascript:window.location.href='moneyCalculator.html'">
+                财富增长
+            </p>
+        </div>
+        <div class="ui-bottom">
+            <div class="ui-more__leftImg">
+            </div>
+            <div class="ui-more__text">
+                <div class="ui-more__Title">
+                    合域理财&nbsp;安心未来
+                </div>
+                <div class="ui-footer__subTitle">
+                    公众号：合域理财窗口
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+<script src="./childCalculator.js"></script>
+</html>
